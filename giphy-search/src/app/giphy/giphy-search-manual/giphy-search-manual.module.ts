@@ -3,9 +3,11 @@ import { CommonModule } from '@angular/common';
 
 import { GiphySearchManualComponent } from './giphy-search-manual.component';
 import { GiphySearchService } from '../giphy-search.service';
+import { HttpModule } from '@angular/http';
 @NgModule({
 	imports: [
-		CommonModule
+		CommonModule,
+		HttpModule
 	],
 	exports: [
 		GiphySearchManualComponent
