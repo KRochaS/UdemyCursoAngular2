@@ -1,5 +1,8 @@
 limit: <input type="number">
 <br>
-term: <input type="text">
+term: <input type="text" (keyup.enter)="pesquisarGiphy()">
 <br>
-<button type="text"> Pesquisar</button>
+<button (click)="pesquisarGiphy()" type="text"> Pesquisar</button>
+ <!-- TODO: (click) = Event Binding -->
+ <!-- keyup.enter = Event binding no input
+ usado para digitar algo no input e apertar enter -->
