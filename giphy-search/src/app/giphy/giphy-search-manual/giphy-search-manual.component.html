@@ -15,7 +15,9 @@ para ter na tela  -->
 <!-- ([ngModel])="variavel" TWO-WAY DATA BUILDING ngModel transpassar o que foi digitado na input para a variável que está
 no component.ts -->
 
-<a *ngFor="let gif of gifs">
+<a *ngFor="let gif of gifs" [href]="gif.url">
     <img src="http://i.giphy.com/{{gif.id}}.gif" title="image {{gif.id}}">
 
 </a>
+
+<app-giphy-search-list [gifz]="gifs"></app-giphy-search-list>

@@ -1,15 +1,14 @@
+import { GiphySearchListModule } from './../giphy-search-list/giphy-search-list.module';
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { GiphySearchManualComponent } from './giphy-search-manual.component';
 import { GiphySearchService } from '../giphy-search.service';
-import { HttpModule } from '@angular/http';
-import { FormsModule } from '@angular/forms'
+import { SharedModuleModule } from '../../shared/shared-module.module';
 @NgModule({
 	imports: [
-		CommonModule,
-		HttpModule,
-		FormsModule
+		SharedModuleModule,
+		GiphySearchListModule
 	],
 	exports: [
 		GiphySearchManualComponent
