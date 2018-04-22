@@ -1,6 +1,6 @@
-limit: <input type="number">
+limit: <input type="number" [(ngModel)]="limit">
 <br>
-term: <input type="text" (keyup.enter)="pesquisarGiphy()">
+term: <input type="text" (keyup.enter)="pesquisarGiphy()" [(ngModel)]="term">
 <br>
 <button (click)="pesquisarGiphy()" type="text"> Pesquisar</button>
  <!-- TODO: (click) = Event Binding -->
@@ -11,3 +11,11 @@ term: <input type="text" (keyup.enter)="pesquisarGiphy()">
 
  <!-- | json = Pipe Json faz com que o objeto gifs seja convertido em um json
 para ter na tela  -->
+
+<!-- ([ngModel])="variavel" TWO-WAY DATA BUILDING ngModel transpassar o que foi digitado na input para a variável que está
+no component.ts -->
+
+<a *ngFor="let gif of gifs">
+    <img src="http://i.giphy.com/{{gif.id}}.gif" title="image {{gif.id}}">
+
+</a>

@@ -11,6 +11,9 @@ import { GiphySearchService } from '../giphy-search.service';
 export class GiphySearchManualComponent {
 
 	gifs: any[] = [];
+	limit: string;
+	term: string;
+
 	constructor(private giphySearchService: GiphySearchService) {
 
 	}
@@ -25,7 +28,7 @@ export class GiphySearchManualComponent {
 	// e receber a resposta que é um Response
 	// provocar a execução assincrona
 	pesquisarGiphy() {
-		this.giphySearchService.pesquisarGiphy('2','good')
+		this.giphySearchService.pesquisarGiphy(this.limit, this.term)
 		.subscribe((response: Response) => this.gifs = response.json().data);
 		// TODO: como tem apenas uma requisição não é necessário {
 		// .subscribe((response: Response) => {
