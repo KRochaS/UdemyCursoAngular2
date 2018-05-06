@@ -1,4 +1,7 @@
 <a *ngFor="let gif of gifz" [href]="gif.url">
-    <img src="http://i.giphy.com/{{gif.id}}.gif" title="image {{gif.id}}">
-
+    <img [src]="gif?.images?.fixed_height?.url" title="image {{gif.id}}">
 </a>
+
+<!-- ?.  operador safy que o angular oferece
+
+gif?.images?.fixed-->

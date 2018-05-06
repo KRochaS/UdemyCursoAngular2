@@ -1,6 +1,7 @@
 import { Response } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
 import { GiphySearchService } from '../giphy-search.service';
+import { Giphy } from './giphy.type';
 
 @Component({
 	selector: 'app-giphy-search-manual',
@@ -10,7 +11,7 @@ import { GiphySearchService } from '../giphy-search.service';
 // TODO: Injetando o serviço no construtor
 export class GiphySearchManualComponent {
 
-	gifs: any[] = [];
+	gifs: Giphy[] = [];
 	limit: string;
 	term: string;
 

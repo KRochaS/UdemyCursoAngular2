@@ -5,10 +5,12 @@ import { CommonModule } from '@angular/common';
 import { GiphySearchManualComponent } from './giphy-search-manual.component';
 import { GiphySearchService } from '../giphy-search.service';
 import { SharedModuleModule } from '../../shared/shared-module.module';
+import { GiphySearchManualComponentRoutingModule } from './giphy-search-routing.module';
 @NgModule({
 	imports: [
 		SharedModuleModule,
-		GiphySearchListModule
+		GiphySearchListModule,
+		GiphySearchManualComponentRoutingModule
 	],
 	exports: [
 		GiphySearchManualComponent
