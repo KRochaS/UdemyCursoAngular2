@@ -1,6 +1,6 @@
 import { GiphySearchService } from "../giphy-search.service";
 
-fdescribe('giphy-search.service.spec.ts', () => {
+describe('giphy-search.service.spec.ts', () => {
 
     // no [] vai colocar os metódos que quer mockar
     // que o obj precisa responder caso seja chamado
