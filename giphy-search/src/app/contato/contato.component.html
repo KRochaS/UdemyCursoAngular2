@@ -2,7 +2,16 @@
 	<!--  #f="ngForm" - Um elemento f do tipo ngForm -->
 	<label>
 		<span> Nome Completo: </span>
-		<input id="nome" type="text" name="nome" placeholder="Seu Nome" ngModel> 
+		<input id="nome" type="text" name="nome" placeholder="Seu Nome" ngModel minlength="2" required> 
 	</label>
 
+
+	<label ngModelGroup="contato" #contatoUsuario="ngModelGroup">
+		<span>
+			Email:
+		</span>
+		<input type="text" placeholder="Seu E-mail" name="email" ngModel required> 
+	</label>
+
+	<button type="submit" [disabled]="f.invalid"> Sign Up </button>
 </form>
