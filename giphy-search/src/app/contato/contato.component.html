@@ -1,0 +1,8 @@
+<form #f="ngForm" (ngSubmit)="enviarContato(f)">
+	<!--  #f="ngForm" - Um elemento f do tipo ngForm -->
+	<label>
+		<span> Nome Completo: </span>
+		<input id="nome" type="text" name="nome" placeholder="Seu Nome" ngModel> 
+	</label>
+
+</form>
