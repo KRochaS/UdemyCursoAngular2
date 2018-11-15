@@ -2,9 +2,16 @@
 	<!--  #f="ngForm" - Um elemento f do tipo ngForm -->
 	<label>
 		<span> Nome Completo: </span>
-		<input id="nome" type="text" name="nome" placeholder="Seu Nome" ngModel minlength="2" required> 
+		<input id="nome" type="text" name="nome" placeholder="Seu Nome" #nome="ngModel" ngModel minlength="2" required> 
 	</label>
 
+	<br>
+
+	<div *ngIf="nome ? nome.errors?.required && nome.touched : ''" class="error">
+		Nome é obrigatório
+	</div>
+
+	<br>
 
 	<label ngModelGroup="contato" #contatoUsuario="ngModelGroup">
 		<span>
@@ -13,5 +20,21 @@
 		<input type="text" placeholder="Seu E-mail" name="email" ngModel required> 
 	</label>
 
+
+	<br>
+	<br> 
+
+	<span> Mensagem: </span>
+	<input type="text" placeholder="mensagem" name="mensagem" ngModel>
+
 	<button type="submit" [disabled]="f.invalid"> Sign Up </button>
 </form>
+
+<!-- ngForm -> '#f'  tipo ngForm, variável f
+	ngModel -> 'nome'
+	ngModelGroup -> 'contato'
+		-> ngModel -> 'email'
+
+-->
+<p> {{ nome.errors | json }} </p>
+<p> {{ f.controls.nome?.errors | json }}</p>
