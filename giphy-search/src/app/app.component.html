@@ -1,14 +1,14 @@
-<a [routerLink]="giphy"> Giphy</a>
- 
-<a [routerLink]="contato"> Contato</a>
-
-
-<hr> 
-
+<a [routerLink]="'/'">Welcome</a>
+<a [routerLink]="'giphy'">Giphy</a>
+<a [routerLink]="'contato'">Contato</a>
+<a [routerLink]="'clientes'">Clientes</a>
+<hr />
 <router-outlet></router-outlet>
+<hr /> Footer
 
 
 <!-- o giphy-search-routing.module.ts 
 está declarado no component path para abrir o component
 GiphySearchManualComponent com isso pode mudar o seletor
 para router-outlet -->
+

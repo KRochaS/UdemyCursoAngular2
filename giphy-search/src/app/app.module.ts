@@ -7,11 +7,12 @@ import { GiphySearchManualComponentModule } from './giphy/giphy-search-manual/gi
 import { AppRoutingModule } from './app-routing.module';
 import { ContatoModule } from './contato/contato.module';
 import { HttpClientModule } from '@angular/common/http';
+import { PageNotFoundComponent } from "././pagenotfound/pagenotfound.component";
 
 
 
 @NgModule({
-  declarations: [AppComponent],
+  declarations: [AppComponent, PageNotFoundComponent],
   imports: [
     BrowserModule,
     GiphySearchManualComponentModule,
