@@ -2,6 +2,7 @@ import { Response } from '@angular/http';
 import { Component, OnInit } from '@angular/core';
 import { GiphySearchService } from '../giphy-search.service';
 import { Giphy } from './giphy.type';
+import { Title } from '@angular/platform-browser';
 
 @Component({
 	selector: 'app-giphy-search-manual',
@@ -15,12 +16,13 @@ export class GiphySearchManualComponent {
 	limit: string;
 	term: string;
 
-	constructor(private giphySearchService: GiphySearchService) {
+	constructor(private giphySearchService: GiphySearchService, protected title: Title) {
 
 	}
 
-	OnInit() {
 
+	ngOnInit() {
+		this.title.setTitle('Giphy Search Manual');
 	}
 
 	// TODO: Método pesquisarGiphy chama o método que esta no serviço
