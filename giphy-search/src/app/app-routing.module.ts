@@ -7,9 +7,15 @@ import { Routes, RouterModule } from '@angular/router';
     RouterModule.forRoot([
       // colocar rotas lazy loading
       // carregadas a medida que for necessário
+
+      // {
+      //   path: "giphy",
+      //   loadChildren:
+      //     "app/giphy/giphy-search-manual/giphy-search-manual.module#GiphySearchManualComponentModule"
+      // }
     ])
   ],
-  exports: [ RouterModule],
+  exports: [RouterModule],
   declarations: []
 })
-export class AppRoutingModule { }
+export class AppRoutingModule {}
