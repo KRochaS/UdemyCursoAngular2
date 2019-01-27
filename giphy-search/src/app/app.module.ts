@@ -1,29 +1,28 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
-
+import { HttpModule } from '@angular/http';
 import { AppComponent } from './app.component';
-import { GiphySearchManualComponentModule } from './giphy/giphy-search-manual/giphy-search-manual.module';
 import { AppRoutingModule } from './app-routing.module';
-import { ContatoModule } from './contato/contato.module';
-import { HttpClientModule } from '@angular/common/http';
-import { PageNotFoundComponent } from "././pagenotfound/pagenotfound.component";
-import { GiphySearchAutoComponent } from './giphy/giphy-search-manual/giphy-search-auto/giphy-search-auto.component';
-import { GiphySearchAutoRoutingModule } from './giphy/giphy-search-manual/giphy-search-auto/giphy-search-auto-routing.module';
-
-
+import { GiphyComponent } from './giphy/giphy.component';
+import { GiphyService } from './giphy/giphy.service';
+import { AppWelcomeModule } from './app-welcome/app-welcome.module';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
-  declarations: [AppComponent, PageNotFoundComponent, GiphySearchAutoComponent],
+  declarations: [
+    AppComponent,
+    GiphyComponent,
+  ],
   imports: [
     BrowserModule,
-    GiphySearchManualComponentModule,
-    GiphySearchAutoRoutingModule,
-    ContatoModule,
+    HttpModule,
+    AppWelcomeModule,
     AppRoutingModule,
-    HttpClientModule
   ],
-  providers: [],
-  bootstrap: [AppComponent]
+  providers: [ GiphyService ],
+  exports: [ FormsModule ],
+
+  bootstrap: [ AppComponent ]
 })
-export class AppModule {}
+export class AppModule {
+}

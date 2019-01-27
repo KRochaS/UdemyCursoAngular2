@@ -1,16 +1,13 @@
 <a [routerLink]="'/'">Welcome</a>
-<br>
-<a [routerLink]="'giphy'">Giphy Search Manual</a>
-<br>
+<a [routerLink]="'giphy-search'">giphy-search</a>
+<a [routerLink]="'giphy-search-auto'">giphy-search-auto</a>
+<a [routerLink]="'diretiva-common-module'">diretiva-common-module</a>
+<!-- <a [routerLink]="'change-detection'">change-detection</a>. -->
+<!-- <a [routerLink]="'pipe-component'">pipe-component</a> -->
 
-<a [routerLink]="'giphy-search-auto'"> Giphy Search Auto </a>
-<hr />
-<router-outlet></router-outlet>
+<br/>
+<br/>
+<br/>
 
-
-
-<!-- o giphy-search-routing.module.ts 
-está declarado no component path para abrir o component
-GiphySearchManualComponent com isso pode mudar o seletor
-para router-outlet -->
-
+<router-outlet >
+</router-outlet>

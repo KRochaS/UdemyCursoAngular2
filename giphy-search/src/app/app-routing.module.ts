@@ -1,21 +1,34 @@
 import { NgModule } from '@angular/core';
-import { Routes, RouterModule } from '@angular/router';
-
+import { RouterModule } from '@angular/router';
 
 @NgModule({
   imports: [
     RouterModule.forRoot([
-      // colocar rotas lazy loading
-      // carregadas a medida que for necessário
-
       // {
-      //   path: "giphy",
-      //   loadChildren:
-      //     "app/giphy/giphy-search-manual/giphy-search-manual.module#GiphySearchManualComponentModule"
-      // }
+      //   path: 'change-detection',
+      //   loadChildren: 'app/change-detection/change-detection.module#ChangeDetectionModule'
+      // },
+      {
+        path: 'giphy-search-auto',
+        loadChildren: 'app/giphy/giphy-search/giphy-search-auto/giphy-search-auto.module#GiphySearchAutoModule'
+      },
+      {
+        path: 'giphy-search',
+        loadChildren: 'app/giphy/giphy-search/giphy-search.module#GiphySearchModule'
+      },
+      // {
+      //   path: 'pipe-component',
+      //   loadChildren: 'app/pipe/pipe.module#PipeModule'
+      // },
+      {
+        path: 'diretiva-common-module',
+        loadChildren: 'app/diretiva-common-module/diretiva-common-module.module#DiretivaCommonModuleModule'
+      }
+
     ])
   ],
-  exports: [RouterModule],
-  declarations: []
+  exports: [ RouterModule ]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule {
+
+}
