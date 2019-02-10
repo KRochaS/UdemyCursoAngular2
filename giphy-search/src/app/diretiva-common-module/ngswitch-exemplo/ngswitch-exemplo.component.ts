@@ -5,6 +5,11 @@ import { Component } from '@angular/core';
   templateUrl: 'ngswitch-exemplo.component.html'
 })
 export class NgSwitchExemploComponent {
-  
+  formatacao: number = 0;
+
+
+  setFormatacao(num: number) {
+    this.formatacao = num;
+  }
 
 }
