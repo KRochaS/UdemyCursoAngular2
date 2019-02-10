@@ -1,1 +1,12 @@
-<p> ngclass work! </p>
+<p class="orange"> Classe estática utilizando "class" do atributo</p>
+
+
+<p ngClass="orange" class="center"> Classe utilizando class do próprio atributo e ngClass do Angular </p>
+
+<p [ngClass]="['sucess', 'big']"> [ngClass] passando um array de classes</p>
+
+<p [ngClass]="{card: true, dark: dark, flat: flat}"> Adicionando classe com condição booleana </p>
+
+<button type="button" (click)="flat = !flat"> Click flat </button>
+
+<button type="button" (click)="dark = !dark"> Click Dark </button>

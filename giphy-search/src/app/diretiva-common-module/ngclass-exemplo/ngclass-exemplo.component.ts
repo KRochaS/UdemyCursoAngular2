@@ -7,4 +7,6 @@ import { Component } from '@angular/core';
 })
 export class NgClassExemploComponent {
  
+  dark: boolean = false;
+  flat: boolean = false;
 }

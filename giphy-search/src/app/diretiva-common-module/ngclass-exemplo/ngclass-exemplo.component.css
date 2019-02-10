@@ -1,0 +1,29 @@
+.orange {
+    color: orange;
+}
+
+.center {
+   display: flex;
+   align-items: center;
+}
+
+.sucess {
+    color: green;
+
+}
+.big {
+    font-size: 20px;
+}
+
+.card {
+  color: 'brown'; 
+}
+
+.flat {
+    background-color: grey;
+}
+
+.dark {
+    background-color: black;
+    color: white;
+}
