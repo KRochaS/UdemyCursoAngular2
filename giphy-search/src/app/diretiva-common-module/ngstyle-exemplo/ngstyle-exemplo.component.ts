@@ -7,6 +7,14 @@ import { Component } from '@angular/core';
 })
 export class NgStyleExemploComponent {
 
+  cor: string = 'blue';
+
+  borderStyle: string = '1px solid #0000';
 
 
+  styles = {
+    'color': 'yellow',
+    'font-weight': 'bold',
+    'border-bottom': '1px solid #0000'
+  }
 }

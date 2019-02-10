@@ -1,1 +1,8 @@
-<p> ngstyle work</p>
+<p style="color: red; font-weight: bold; border-bottom: 1px solid #0000"> Veja o ngStyle manual tradicional aqui </p>
+
+
+<p [ngStyle]="{'color': 'red', 'font-weight': 'bold', 'border-bottom': '1px solid #0000'}"> ngStyle com propertybind </p>
+
+<p [ngStyle]="{'color': cor, 'border-bottom': borderStyle}"> ngStyle com declaração de estilo no ts</p>
+
+<p [ngStyle]="styles"> ngStyle com todo o estilo declarado no ts com um objeto</p>
