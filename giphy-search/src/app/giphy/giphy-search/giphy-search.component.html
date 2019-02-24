@@ -1,15 +1,32 @@
+<hr />
 
-<hr>
+Limit: <input type="number" [(ngModel)]="limit" style="width: 4em;" /> Term:
+<input type="text" [(ngModel)]="term" (keyup.enter)="pesquisarGiphy()" />
 
-Limit: <input type="number" [(ngModel)]="limit" style="width: 4em;">
-Term: <input type="text" [(ngModel)]="term" (keyup.enter)="pesquisarGiphy()">
+<input type="button" value="Pesquisar" (click)="pesquisarGiphy()" />
 
-<input type="button" value="Pesquisar" (click)="pesquisarGiphy()">
-
-<BR/>
+<BR />
 
 <giphy-search-list [gifs]="gifs"></giphy-search-list>
 
+<h1>Pipes</h1>
 
+<!-- DatePipe, UpperCasePipe,CurrencyPipe, PercentPipe -->
 
+{{ "aqui tem um pipe" | uppercase }}
 
+{{ dataCriacao | date }}
+
+<p>{{ dataCriacao | date: "MM/dd/yy" }}</p>
+
+<p>{{ dataCriacao | date | uppercase }}</p>
+
+<p>{{ birthday | date: "fullDate" | lowercase }}</p>
+
+<p>
+  {{ mensagem | uppercase }} <a [href]="youtube"> Canal Código Refinado </a>
+</p>
+
+<a href="youtube"> Canal Código Refinado </a>
+
+<a href="{{ youtube }}"> Canal código refinado </a>
