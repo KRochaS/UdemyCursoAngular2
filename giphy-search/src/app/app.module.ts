@@ -19,10 +19,10 @@ import { FormsModule } from '@angular/forms';
     AppWelcomeModule,
     AppRoutingModule,
   ],
-  providers: [ GiphyService ],
-  exports: [ FormsModule ],
+  providers: [GiphyService],
+  exports: [FormsModule],
 
-  bootstrap: [ AppComponent ]
+  bootstrap: [AppComponent]
 })
 export class AppModule {
 }

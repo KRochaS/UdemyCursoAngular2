@@ -4,10 +4,10 @@ import { RouterModule } from "@angular/router";
 @NgModule({
   imports: [
     RouterModule.forRoot([
-      // {
-      //   path: 'change-detection',
-      //   loadChildren: 'app/change-detection/change-detection.module#ChangeDetectionModule'
-      // },
+      {
+        path: 'change-detection',
+        loadChildren: 'app/change-detection/change-detection.module#ChangeDetectionModule'
+      },
       {
         path: "giphy-search-auto",
         loadChildren:
@@ -31,4 +31,4 @@ import { RouterModule } from "@angular/router";
   ],
   exports: [RouterModule]
 })
-export class AppRoutingModule {}
+export class AppRoutingModule { }
