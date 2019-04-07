@@ -1,0 +1,9 @@
+<a [routerLink]="[{outlets: {negrito: ['bem-vindo']}}]"> Bem-Vindo</a>
+<a [routerLink]="[{outlets: {italico: ['contato']}}]"> Contato</a>
+<router-outlet></router-outlet>
+<b>
+  <router-outlet name="negrito"></router-outlet>
+</b>
+<i>
+  <router-outlet name="italico"></router-outlet>
+</i>
